@@ -1,14 +1,4 @@
-#Final Project
-
-#I'm Hungry and Indecisive... what should I eat?
-
-Here you can "roll the dice" for ideas on what your next meal should include. Currently, there are preprogrammed dice you can choose from: Sober, Drunk and "MUNCHIES!!!!"
-
-Within each category, there are two die options: an Eat In dice and an Eat Out dice. After you choose the dice you want to roll, type "ROLL".
-
-Happy eating!
-
-#User flow:
+User flow:
 
 Run the program.
 
