@@ -20,21 +20,25 @@ Happy eating!
 Run the program.
 
 A menu will appear with the following options:
+	
 	Choose how sober you are:
 		- Straight Edge
 		- Druuuunk
 		- Must Have MUNCHIES!!!!
 
 Once the user chooses an item from the previous menu, a sub menu appears. Each will contain these options:
+
 	Which dice do you want to roll?
 		- Eat in
 		- Eat out
 
 Once the dice has been chosen:
+	
 	You selected (name of dice), are you ready to roll? 'Yes' or 'No'
 
 If 'Yes':
 	print "Alright! Here goes! You should (cook/eat(depending on dice selection))..."
+
 elif 'No':
 	print "Really? You're that indecisive? Here, I'll let you start over"
 	return to beginning of soberiety options
