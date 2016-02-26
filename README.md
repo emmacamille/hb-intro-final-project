@@ -36,10 +36,10 @@ Once the dice has been chosen:
 	
 	You selected (name of dice), are you ready to roll? 'Yes' or 'No'
 
-If 'Yes':
-	print "Alright! Here goes! You should (cook/eat(depending on dice selection))..."
+	If 'Yes':
+		print "Alright! Here goes! You should (cook/eat(depending on dice selection))..."
 
-elif 'No':
-	print "Really? You're that indecisive? Here, I'll let you start over"
-	return to beginning of soberiety options
+	elif 'No':
+		print "Really? You're that indecisive? Here, I'll let you start over"
+		return to beginning of soberiety options
 
