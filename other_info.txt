@@ -1,23 +1,45 @@
-User flow:
+Here you can "roll the dice" for ideas on what your next meal should include. Currently, there are preprogrammed dice you can choose from: Sober, Drunk and "MUNCHIES!!!!"
+
+Within each category, there are two die options: an Eat In dice and an Eat Out dice. You will be asked if you are ready to roll. If you are, it will "roll the dice" and give you an idea of what to eat.
 
 Run the program.
 
 A menu will appear with the following options:
+	
 	Choose how sober you are:
 		- Straight Edge
 		- Druuuunk
 		- Must Have MUNCHIES!!!!
 
 Once the user chooses an item from the previous menu, a sub menu appears. Each will contain these options:
+
 	Which dice do you want to roll?
 		- Eat in
 		- Eat out
 
 Once the dice has been chosen:
+	
 	You selected (name of dice), are you ready to roll? 'Yes' or 'No'
 
-If 'Yes':
-	print "Alright! Here goes! You should (cook/eat(depending on dice selection))..."
-elif 'No':
-	print "Really? You're that indecisive? Here, I'll let you start over"
-	return to beginning of soberiety options
+	If 'Yes':
+		print "Alright! Here goes! You should (cook/eat(depending on dice selection))..."
+
+	elif 'No':
+		print "Really? You're that indecisive? Here, I'll let you start over"
+		return to beginning of soberiety options
+
+
+# option
+
+First a message will print:
+	"So, you don't know what to eat? I have some ideas, but first, I need you to answer some quesitons. All questions will ask you for a number on a scale from 1 to 10, 1 being the least favorable and 10 being the most favorable. Are you ready? Yes or no?"
+
+Then, the user will be asked a series of questions:
+
+	- How sober are you on a scale of 1 to 10?
+
+	- Do you want to eat in or do you have nothing in the house?
+
+	- Do you want something meaty or are you a veg head?
+
+	- Are you in the mood for something sweet of savory?
