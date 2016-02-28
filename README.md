@@ -29,7 +29,7 @@ Happy eating!
 - At any point during the qualities questions, the user could type "fuck this" and the program will just print a random outcome based on their most recent answer.
 Skills used: lists, dictionaries, modules, conditionals.
 
-# questions about the qualities of foods
+Questions about the qualities of foods
 
 sobriety = raw_input("How sober are you? Type '1' for sober, '2' for drunk, and '3' for high as a kite:")
 		#just want to save this data for the final outcome sentence
@@ -42,7 +42,7 @@ sweet_or_savory = raw_input("Are you looking for something sweet or savory? Type
 		else:
 			# go to savory file
 
-# could have another options that just states "fuck this!" which just picks a random option from either sweet or savory depending on last answer
+Could have another options that just states "fuck this!" which just picks a random option from either sweet or savory depending on last answer
 
 hot_or_cold = raw_input("Are you in the mood for hot or cold food? Type '1' for hot and '0' for cold:")
 		if hot_or_cold == 1:
