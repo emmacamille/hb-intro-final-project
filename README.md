@@ -15,11 +15,16 @@ Happy eating!
 	- Chewy or Crunchy
 	- Utensils or None
 	- Healthy or Not
-- Eitehr select to see options or "Roll the Dice"
+- Either select to see options or "Roll the Dice"
 - Get eating!
 
 #Psuedocode:
 
+- A list of lists/dictionaries will hold the possible outcomes and the qualities that are associated with them.
 
-	- 
+- The user questions will be if/else statements that will eliminate options from the main list of outcomes.
+
+- The outcomes will either be printed at the user's request or one outcome will be printed at random by "rolling the dice".
+
+Skills used: lists, dictionaries, modules, conditionals.
 
