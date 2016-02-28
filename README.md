@@ -26,5 +26,6 @@ Happy eating!
 
 - The outcomes will either be printed at the user's request or one outcome will be printed at random by "rolling the dice".
 
+- At any point during the qualities questions, the user could type "fuck this" and the program will just print a random outcome based on their most recent answer.
 Skills used: lists, dictionaries, modules, conditionals.
 

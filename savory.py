@@ -1,8 +1,8 @@
+# savory food outcomes
 [
 	{"Burrito":
 		[
 		"hot",
-		"savory",
 		"chewy",
 		"no utensils",
 		"not healthy"
@@ -66,8 +66,6 @@
 	{"Sushi":
 		[
 		"hot",
-		"savory",
-		"sweet",
 		"crunchy",
 		"chewy",
 		"utensils",
