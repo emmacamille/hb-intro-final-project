@@ -19,22 +19,27 @@ def roll_the_dice(outcomes):
 
 # custom dice 
 
+
 def custom_dice():
+	
 	dice_outcomes = []	
-	outcomes_made = 1
 
-	while outcomes_made < 7:
+	print "It's nice to be able to pick the options on the dice. You are going to be able to add up to six food items to your dice."
 
-		print "It's nice to be able to pick the options on the dice. You are going to be able to add up to six food items to your dice."
-		new_outcomes = raw_input("What is the number %i item you would like to add to the list?") %(outcomes_made)
+	while len(dice_outcomes) < 6: # six options
 
-	 	if (outcome in dice_outcomes):
+		new_outcomes = raw_input("What is item you would like to add to the list?") 
+
+	 	if (new_outcomes in dice_outcomes):
+	 		# if food item exists in list, do not add
 	 		print "You've already added that item to the dice!"
 	 	else: 
-	 		outcomes_made = outcomes_made + 1
+	 		# if food item does not exist, add to list
 	 		dice_outcomes.append(new_outcomes)
 
-	return random.choice(dice_outcomes)
+	final_choice = random.choice(dice_outcomes)
+
+	print "And the dice says... %s" %(final_choice)
 
 print custom_dice()
 			
