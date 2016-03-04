@@ -1,3 +1,5 @@
+import random
+
 class DiceEdit(object):
 	def __init__(self, dice_category):
 		self.dice_category = dice_category.lower()
@@ -18,8 +20,13 @@ class DiceEdit(object):
 		# deal with case sensitivity
 
 	def random_outcome(self):
+		random.choice(self.dice_outcomes)
 		# random.choice from dice_outcomes
 
 	def return_outcomes(self):
 		# print/return dice.outcomes
+
+	def save_custom_to_file(self):
+
+	def read_custom_file(self):
 

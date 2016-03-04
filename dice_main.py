@@ -25,6 +25,8 @@ dice_choice = int(dice_choice)
 if dice_choice == 1:
 	print "Awesome! You're sober and don't know what to eat, let me help you with that!"
 	print sober_dice_edit.random_outcome()
+	# didn't like it? Want to roll again? Removes last rolled outcome.
+
 		
 elif dice_choice == 2:
 	print "NICE! You're drunk and don't know what to eat! Let me help you with that!"
@@ -40,6 +42,9 @@ elif dice_choice == 4:
 	
 elif dice_choice == 5:
 	print "So you can't decide what to eat, but you have a couple ideas! Let me help you with that!"
+	# need to add items to dice first then print random
+	# automatically save dice to file
+	# need to save name and food items
 	print custom_dice_edit.random_outcome()
 
 else: 

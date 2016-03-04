@@ -12,15 +12,19 @@ mystery_box_categories = {
 	"spice":["Turmeric", "Tomatillo", "Cumin", "Garamasala", "Paprika", "Jalepeno"]
 }
 
-mystery_box_results = []
+def mystery_box_roll():
 
-for category in mystery_box_categories:
-	result = random.choice(mystery_box_categories[category])
-	mystery_box_results.append(result)
+	mystery_box_results = []
 
-mystery_box_string = ""
+	for category in mystery_box_categories:
+		result = random.choice(mystery_box_categories[category])
+		mystery_box_results.append(result)
 
-for item in mystery_box_results:
-	mystery_box_string = mystery_box_string + item + "\n"
+	mystery_box_string = ""
 
-print "In your mystery box..." + "\n" +mystery_box_string + "Now get cooking!"
+	for item in mystery_box_results:
+		mystery_box_string = mystery_box_string + item + "\n"
+		
+	return mystery_box_string
+
+
