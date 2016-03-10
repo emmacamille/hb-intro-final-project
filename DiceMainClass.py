@@ -8,9 +8,9 @@ class DiceEdit(object):
 	def add_to_dice(self, food_list):
 		# self.dice_outcomes.extend(food)
 		for item in food_list:
-			item_upper = self.dice_outcomes.upper()
-			if item_upper not in food_list:
-				self.dice_outcomes.append(item_upper)
+			# item_upper = self.dice_outcomes.upper()
+			if item not in self.dice_outcomes:
+				self.dice_outcomes.append(item)
 		# food you pass in much be a list b/c extend
 		# what if food item already exists
 		# deal with case sensitivity
@@ -20,13 +20,19 @@ class DiceEdit(object):
 		# deal with case sensitivity
 
 	def random_outcome(self):
-		random.choice(self.dice_outcomes)
-		# random.choice from dice_outcomes
+		print "Are you ready to roll the dice?"
+		yes_no_answer = raw_input("Yes or no?")
 
-	def return_outcomes(self):
-		# print/return dice.outcomes
+		if yes_no_answer == "NO" or yes_no_answer == "no" or yes_no_answer == "No":
+			print "Seriously, you're that indecisive. Fine."
+			#end program
+		else: 
+			return random.choice(self.dice_outcomes)
 
-	def save_custom_to_file(self):
+	# def return_outcomes(self):
+	# 	# print/return dice.outcomes
 
-	def read_custom_file(self):
+	# def save_custom_to_file(self):
+
+	# def read_custom_file(self):
 

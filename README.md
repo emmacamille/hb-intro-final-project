@@ -17,6 +17,7 @@ A menu will appear with the following options:
 		- Druuuunk
 		- MUNCHIES!!!!
 		- Sweet
+		- Custom
 		- Mystery Box Cooking Challenge
 
 Once the dice has been chosen:

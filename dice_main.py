@@ -5,11 +5,12 @@ sober_dice_edit = DiceEdit("sober")
 drunk_dice_edit = DiceEdit("drunk")
 munchies_dice_edit = DiceEdit("munchies")
 sweet_dice_edit = DiceEdit("sweet")
+custom_dice_edit = DiceEdit("custom")
 
 sober_dice_edit.add_to_dice(["Italian", "Sushi", "Thai", "Mediterranean", "Ramen", "Tapas"])
 drunk_dice_edit.add_to_dice(["Pizza", "Burger", "Burrito", "Brinner", "Grilled Cheese", "Nachos"])
 munchies_dice_edit.add_to_dice(["French Fries", "Chips and Dip", "Everything in your fridge in a pan!", "Tacos", "Fried Egg Pizza Sandwich", "Cheesesteak"])
-sweet_dice_edit.add_to_dice(["Candy!!", "Chocolate Raspberry Milk Shake", "Ice Cream!", "Cake", "CHOCOLATE", "Strawberries"])
+sweet_dice_edit.add_to_dice(["Candy!!", "Chocolate Raspberry Milk Shake", "Ice Cream!", "Cake", "CHOCOLATE", "Donuts"])
 
 print "Welcome to 'Hungry and Indecisive'! A set of food dice to make the decision a little easier!"
 print "1 - Sober Dice"
