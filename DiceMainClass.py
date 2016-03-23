@@ -1,4 +1,5 @@
 import random
+from diceRemarks import *
 
 class DiceEdit(object):
 	def __init__(self, dice_category):
@@ -22,12 +23,14 @@ class DiceEdit(object):
 		# else: self.dice_outcomes.append(new_item)
 		print "You'd like to create your own dice? Cool! Here are the rules:" + "\n" + "1. Enter as many food items as you'd like." + "\n" + "2. Once you have added everything, type 0 (the number zero)." + "\n" + "3. Get unhungry!"
 
-		while len(self.dice_outcomes) < 5: # six options
+		while len(self.dice_outcomes) < 6: # six options
 
 			new_item = raw_input("What is item you would like to add to the list?") 
 			if new_item == "0":
-				break
-				
+				if len(self.dice_outcomes) == 0:
+					print "That's not how it works here. You must have at least 1 item on the dice."
+				else:
+					break
 		 	elif (new_item in self.dice_outcomes):
 		 		# if food item exists in list, do not add
 		 		print "You've already added that item to the dice!"
@@ -39,15 +42,19 @@ class DiceEdit(object):
 		self.dice_outcomes.remove(food)
 		# deal with case sensitivity
 
-	def random_outcome(self):
+	def yes_no_answer(self):
 		print "Are you ready to roll the dice?"
 		yes_no_answer = raw_input("Yes or no?")
 
-		if yes_no_answer == "NO" or yes_no_answer == "no" or yes_no_answer == "No" or yes_no_answer == "n" or yes_no_answer == "N":
-			print "Seriously, you're that indecisive. Fine."
+		if yes_no_answer in ("n", "N", "NO", "no", "No"):
+			print random.choice(no_answer)
 			#end program
 		else: 
+			return True
+
+	def random_outcome(self, yes_no):
 			return random.choice(self.dice_outcomes)
+
 
 	# def return_outcomes(self):
 	# 	# print/return dice.outcomes
@@ -56,3 +63,6 @@ class DiceEdit(object):
 
 	# def read_custom_file(self):
 
+	# def view_menu(self):
+		# elif yes_no_answer in ("menu", "MENU", "Menu"):
+		# 	print self.dice_outcomes
