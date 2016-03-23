@@ -11,121 +11,154 @@ mystery_box_edit = DiceEdit("mystery")
 
 # Preset Dice Options
 
-sober_dice_edit.add_to_dice(["Italian", "Sushi", "Thai", "Mediterranean", "Ramen", "Tapas"])
-drunk_dice_edit.add_to_dice(["Pizza", "Burger", "Burrito", "Brinner", "Grilled Cheese", "Nachos"])
-munchies_dice_edit.add_to_dice(["French Fries", "Chips and Dip", "Everything in your fridge in a pan!", "Tacos", "Fried Egg Pizza Sandwich", "Cheesesteak"])
-sweet_dice_edit.add_to_dice(["Candy!!", "Chocolate Raspberry Milk Shake", "Ice Cream!", "Cake", "CHOCOLATE", "Donuts"])
+sober_dice_edit.add_to_dice(["Italian Food, specifically Pasta!", "Sushi. Ask for Chef's Choice nigiri and see what you get!", "Thai Food!", "Mediterranean Food!", "Ramen, like real Ramen. Go to a restaurant!", "Tapas! Maybe a trip to Spain is in your future..."])
+drunk_dice_edit.add_to_dice(["Pizza!", "Cheeseburger with fried pickles!", "Big Ass Burrito!", "Brinner (that's breakfast for dinner, for your drinking novices out there!", "Grilled Cheese with Hot Sauce!", "Nachos!!!!!"])
+munchies_dice_edit.add_to_dice(["French Fries", "Chips and Dip: mouthfeel gets a solid 10!", "Everything in your fridge in a pan!", "Tacos! Tacos! Tacos!", "Fried Egg Pizza Sandwich", "Cheesesteak. Philly Cheesesteak!"])
+sweet_dice_edit.add_to_dice(["Candy in a Cup!! Step 1: buy lots of candy. Step 2: Make a cup layered with candy. Step 3: EAT CANDY!", "Chocolate Raspberry Milk Shake with Extra Whipped Cream", "Ice Cream with Fudge Sauce!! And maybe a warm brownie?", "Your Favorite Flavor Cake", "CHOCOLATE", "Donuts"])
 
 # Menu
 
 print "Welcome to 'Hungry and Indecisive'! A set of food dice to make the decision a little easier!"
 
+exit_flag = False
+
+while exit_flag == False:
+
+	print "1 - Sober Dice"
+	print "2 - Drunk Dice"
+	print "3 - Munchies Dice"
+	print "4 - Sweet Dice"
+	print "5 - Custom Dice"
+	print "6 - Mystery Box Cooking Challenge"
+	print "Type EXIT to stop rolling dice."
+
+	# Choosing a dice
+
+	dice_choice = raw_input("Select the dice you would like to roll by typing the number on the menu:")
+	# dice_choice = int(dice_choice)
+
+	# Menu results in dice choice, leads you here:
 
 
-print "1 - Sober Dice"
-print "2 - Drunk Dice"
-print "3 - Munchies Dice"
-print "4 - Sweet Dice"
-print "5 - Custom Dice"
-print "6 - Mystery Box Cooking Challenge"
 
-# Choosing a dice
+	if dice_choice not in ["1", "2", "3", "4", "5", "6", "exit", "EXIT", "Exit"] or dice_choice == "" :
+		print "You need to select an item from the menu! Type in the NUMBER on the menu that you would like choose." + "\n \n"
+	else:
+		# EXIT
+		if dice_choice in ["exit", "EXIT", "Exit"]:
+			exit_flag == True
+			exit_remark = random.choice(exit_witty_remark)
+			print "\n \n" + exit_remark + "\n \n" 
+			break
 
-dice_choice = raw_input("Select the dice you would like to roll by typing the number on the menu:")
-# dice_choice = int(dice_choice)
+		# Sober
 
-# Menu results in dice choice, leads you here:
+		elif dice_choice == "1":
 
-# Sober
+			sober_greeting = random.choice(sober_witty_greeting)
+			print "\n \n" + sober_greeting
 
-if dice_choice not in ["1", "2", "3", "4", "5", "6"] or dice_choice == "":
-	print "You need to select an item from the menu! Type in the NUMBER on the menu that you would like choose."
+			yes_no = sober_dice_edit.yes_no_answer()
+			sober_result = sober_dice_edit.random_outcome(yes_no)
 
-elif dice_choice == 1:
+			sober_result_reveal = random.choice(sober_witty_reveal)
+			sober_result_ending = random.choice(sober_witty_ending)
 
-	sober_greeting = random.choice(sober_witty_greeting)
-	print sober_greeting
+			sober_string = "\n \n" + sober_result_reveal + "\n \n" + sober_result + "\n \n" + sober_result_ending + "\n \n"
+			
+			if yes_no == True:
+				print sober_string
 
-	yes_no = sober_dice_edit.yes_no_answer()
-	sober_result = sober_dice_edit.random_outcome(yes_no)
+		# Drunk
 
-	sober_result_reveal = random.choice(sober_witty_reveal)
-	sober_result_ending = random.choice(sober_witty_ending)
+		elif dice_choice == "2":
 
-	sober_string = sober_result_reveal + "\n" + sober_result + "\n" + sober_result_ending
-	if yes_no == True:
-		print sober_string
-	# didn't like it? Want to roll again? Removes last rolled outcome.
+			drunk_greeting = random.choice(drunk_witty_greeting)
+			print "\n \n" + drunk_greeting
 
-# Drunk
+			yes_no = drunk_dice_edit.yes_no_answer()
+			drunk_result = drunk_dice_edit.random_outcome(yes_no)
 
-elif dice_choice == 2:
+			drunk_result_reveal = random.choice(drunk_witty_reveal)
+			drunk_result_ending = random.choice(drunk_witty_ending)
 
-	drunk_greeting = random.choice(drunk_witty_greeting)
-	print drunk_greeting
+			drunk_string = "\n \n" + drunk_result_reveal + "\n \n" + drunk_result + "\n \n" + drunk_result_ending + "\n \n"
 
-	yes_no = drunk_dice_edit.yes_no_answer()
-	drunk_result = drunk_dice_edit.random_outcome(yes_no)
+			
+			if yes_no == True:
+				print drunk_string
 
-	drunk_result_reveal = random.choice(drunk_witty_reveal)
-	drunk_result_ending = random.choice(drunk_witty_ending)
+		# Munchies
+				
+		elif dice_choice == "3":
+			
+			munchies_greeting = random.choice(munchies_witty_greeting)
+			print "\n \n" + munchies_greeting
 
-	drunk_string = drunk_result_reveal + "\n" + drunk_result + "\n" + drunk_result_ending
-	if yes_no == True:
-		print drunk_string
+			yes_no = munchies_dice_edit.yes_no_answer()
+			munchies_results = munchies_dice_edit.random_outcome(yes_no)
 
-# Munchies
-		
-elif dice_choice == 3:
-	
-	munchies_greeting = random.choice(munchies_witty_greeting)
-	print munchies_greeting
+			munchies_result_reveal = random.choice(munchies_witty_reveal)
+			munchies_result_ending = random.choice(munchies_witty_ending)
 
-	yes_no = munchies_dice_edit.yes_no_answer()
-	munchies_results = munchies_dice_edit.random_outcome(yes_no)
+			munchies_string = "\n \n" + munchies_result_reveal + "\n \n" + munchies_results + "\n \n" + munchies_result_ending + "\n \n"
+			
+			if yes_no == True:
+				print munchies_string
 
-	munchies_result_reveal = random.choice(munchies_witty_reveal)
-	munchies_result_ending = random.choice(munchies_witty_ending)
+		# Sweet
+				
+		elif dice_choice == "4":
+			
+			sweet_greeting = random.choice(sweet_witty_greeting)
+			print "\n \n" + sweet_greeting
 
-	munchies_string = munchies_result_reveal + "\n" + munchies_results + "\n" + munchies_result_ending
-	if yes_no == True:
-		print munchies_string
+			yes_no = sweet_dice_edit.yes_no_answer()
+			sweet_results = sweet_dice_edit.random_outcome(yes_no)
 
-# Sweet
-		
-elif dice_choice == 4:
-	
-	sweet_greeting = random.choice(sweet_witty_greeting)
-	print sweet_greeting
+			sweet_result_reveal = random.choice(sweet_witty_reveal)
+			sweet_result_ending = random.choice(sweet_witty_ending)
 
-	yes_no = sweet_dice_edit.yes_no_answer()
-	sweet_results = sweet_dice_edit.random_outcome(yes_no)
+			sweet_string = "\n \n" + sweet_result_reveal + "\n \n" + sweet_results + "\n \n" + sweet_result_ending + "\n \n"
+			
+			if yes_no == True:
+				print sweet_string
 
-	sweet_result_reveal = random.choice(sweet_witty_reveal)
-	sweet_result_ending = random.choice(sweet_witty_ending)
+		# Custom
 
-	sweet_string = sweet_result_reveal + "\n" + sweet_results + "\n" + sweet_result_ending
-	if yes_no == True:
-		print sweet_string
+		elif dice_choice == "5":
+			
+			custom_greeting = random.choice(custom_witty_greeting)
+			print "\n \n" + custom_greeting
 
-# Custom
+			print custom_dice_edit.custom_dice() # allows user to add custom outcomes
+			
+			yes_no = custom_dice_edit.yes_no_answer()
+			custom_result = custom_dice_edit.random_outcome(yes_no) # creates random outcome
+			
+			custom_result_reveal = random.choice(custom_witty_reveal)
+			custom_result_ending = random.choice(custom_witty_ending)
 
-elif dice_choice == 5:
-	print "So you can't decide what to eat, but you have a couple ideas! Let me help you with that!"
-	print custom_dice_edit.custom_dice() # allows user to add custom outcomes
-	yes_no = custom_dice_edit.yes_no_answer()
-	custom_result = custom_dice_edit.random_outcome(yes_no) # creates random outcome
-	custom_string = "Alright. Since you had some ideas, but didn't know what to do, the dice chose " + "\n" + custom_result + "\n" + "Now go do that. Also, you are a weird mix of decisive and indcecisive.  I approve."
-	if yes_no == True:
-		print custom_string
+			custom_string = "\n \n" + custom_result_reveal + "\n \n" + custom_result + "\n \n" + custom_result_ending + "\n \n"
 
-# MYSTERY BOX COOKING CHALLENGE
-else: 
-	print "Welcome to the Mystery Box Challenge! Roll the dice to find out what's in your Mystery Box!"
-	yes_no = mystery_box_edit.yes_no_answer()
-	mystery_box_results = mystery_box_roll() # formats the box items into a list
-	mystery_box_string = "In your mystery box..." + "\n" + mystery_box_results + "Now get cooking!"
-	if yes_no == True:
-		print mystery_box_string
+			if yes_no == True:
+				print custom_string
+
+		# MYSTERY BOX COOKING CHALLENGE
+		else: 
+			
+			mystery_greeting = random.choice(mystery_witty_greeting)
+			print "\n \n" + mystery_greeting
+
+			yes_no = mystery_box_edit.yes_no_answer()
+			mystery_box_results = mystery_box_roll() # formats the box items into a list
+
+			mystery_result_reveal = random.choice(mystery_witty_reveal)
+			mystery_result_ending = random.choice(mystery_witty_ending)
+
+			mystery_box_string = "\n \n" + mystery_result_reveal + "\n \n" + mystery_box_results + mystery_result_ending + "\n \n"
+
+			if yes_no == True:
+				print mystery_box_string
 
 

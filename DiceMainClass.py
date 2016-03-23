@@ -47,7 +47,7 @@ class DiceEdit(object):
 		yes_no_answer = raw_input("Yes or no?")
 
 		if yes_no_answer in ("n", "N", "NO", "no", "No"):
-			print random.choice(no_answer)
+			print "\n \n" + random.choice(no_answer) + "\n \n"
 			#end program
 		else: 
 			return True

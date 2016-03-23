@@ -26,7 +26,7 @@ custom_witty_greeting = [
 	"So you can't decide what to eat, but you have a couple ideas! Let me help you with that!",
 	"You feel like deciding 90 percent of this? Ok. It's up to you. Add whatever you'd like to the dice and then roll it. Who knows, maybe you've had the right answer all along..."
 	]
-mystery_box_witty_greeting = [
+mystery_witty_greeting = [
 	"Welcome to the Mystery Box Challenge! Roll the dice to find out what's in your Mystery Box!",
 	"It's time to play MYSTERY BOX CHALLENGE! There are five items in your box, all you have to do is create a meal that includes ALL FIVE ITEMS! Roll the dice when you're ready!"
 	]
@@ -84,7 +84,7 @@ custom_witty_ending = [
 	"Now go do that. Also, you are a weird mix of decisive and indcecisive.  I approve.",
 	"I guess you should go eat now...",
 	]
-mystery_box_witty_ending = [
+mystery_witty_ending = [
 	"Now get cooking!", 
 	"Get creative!", 
 	"Now... CONFRONT THE BOX!", 
@@ -95,7 +95,13 @@ mystery_box_witty_ending = [
 no_answer = [
 	"Seriously, you're that indecisive. Fine.", 
 	"Really? You don't want to roll the dice? Fine. Be that way.",
-	"WHHHHHYYYYY? Oh well. Bye.",
+	"WHHHHHYYYYY? Oh well.",
 	"I didn't want to help you anyways."
 	]
 
+# EXIT REMARKS:
+exit_witty_remark = [
+	"Sad to see you go. Have fun eating!",
+	"See ya later, alligator!",
+	"Bye for now. I'll see you when you're hungry again."
+	]
