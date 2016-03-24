@@ -56,7 +56,7 @@ while exit_flag == False:
 		elif dice_choice == "1":
 
 			sober_greeting = random.choice(sober_witty_greeting)
-			print "\n \n" + sober_greeting
+			print "\n \n" + sober_greeting + "\n \n"
 
 			yes_no = sober_dice_edit.yes_no_answer()
 			sober_result = sober_dice_edit.random_outcome(yes_no)
@@ -111,7 +111,7 @@ while exit_flag == False:
 		elif dice_choice == "4":
 			
 			sweet_greeting = random.choice(sweet_witty_greeting)
-			print "\n \n" + sweet_greeting
+			print "\n \n" + sweet_greeting + "\n \n"
 
 			yes_no = sweet_dice_edit.yes_no_answer()
 			sweet_results = sweet_dice_edit.random_outcome(yes_no)
@@ -148,7 +148,7 @@ while exit_flag == False:
 		else: 
 			
 			mystery_greeting = random.choice(mystery_witty_greeting)
-			print "\n \n" + mystery_greeting
+			print "\n \n" + mystery_greeting + "\n \n"
 
 			yes_no = mystery_box_edit.yes_no_answer()
 			mystery_box_results = mystery_box_roll() # formats the box items into a list
@@ -156,7 +156,7 @@ while exit_flag == False:
 			mystery_result_reveal = random.choice(mystery_witty_reveal)
 			mystery_result_ending = random.choice(mystery_witty_ending)
 
-			mystery_box_string = "\n \n" + mystery_result_reveal + "\n \n" + mystery_box_results + mystery_result_ending + "\n \n"
+			mystery_box_string = "\n \n" + mystery_result_reveal + "\n \n" + mystery_box_results + "\n \n" +mystery_result_ending + "\n \n"
 
 			if yes_no == True:
 				print mystery_box_string

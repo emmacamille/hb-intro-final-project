@@ -3,7 +3,7 @@
 # GREETINGS
 sober_witty_greeting = [
 	"Being sober isn't the end of the world.  But you can't decide on what to eat! Hmmmm... sucks for you! Wait! Let me help you with that!", 
-	"Sober. Huh. I don't remember that... well, roll the dice and see what my idea or a sober meal is.", 
+	"Sober. Huh. I don't remember that... well, roll the dice and see what my idea of a sober meal is.", 
 	"BORING! But, to each their own. Roll the dice. Who knows, maybe I have some ideas about sober food...",
 	"AWESOME! Nothing beats a sober culinary adventure. Roll the dice to see where your adventure will take you!"
 	]
