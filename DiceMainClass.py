@@ -43,10 +43,24 @@ class DiceEdit(object):
 		# deal with case sensitivity
 
 	def yes_no_answer(self):
-		print "Are you ready to roll the dice?"
+		print "Are you ready to roll the dice? Or type MENU to see what's on the dice!"
 		yes_no_answer = raw_input("Yes or no?")
 
-		if yes_no_answer in ("n", "N", "NO", "no", "No"):
+		if yes_no_answer in ("Menu", "menu", "m", "M", "MENU"):
+			print "\n \n"
+			print self.dice_outcomes 
+			print "\n \n"
+
+			print "Are you ready to roll the dice?"
+			yes_no_answer = raw_input("Yes or no?")
+
+			if yes_no_answer in ("n", "N", "NO", "no", "No"):
+				print "\n \n" + random.choice(no_answer) + "\n \n"
+				#end program
+			else: 
+				yes_no_answer == True
+
+		elif yes_no_answer in ("n", "N", "NO", "no", "No"):
 			print "\n \n" + random.choice(no_answer) + "\n \n"
 			#end program
 		else: 

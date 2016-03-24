@@ -105,3 +105,8 @@ exit_witty_remark = [
 	"See ya later, alligator!",
 	"Bye for now. I'll see you when you're hungry again."
 	]
+
+# COOKIE EVERYTHING:
+cookie_witty_greeting = ["YAY! It's our Final Class!!!! Time for some COOKIES!!!!!", "Congrats! You made it! You found the EASTER EGG!!!", "COOKIE COOKIE COOKIE COOKIE! Roll the dice to get a cookie!"]
+cookie_witty_reveal = ["Are you ready for a cookie? Here's the flavor you're getting:", "Cookie Time! Cookie, cookie, cookie time! You're snacking on:"]
+cookie_witty_ending = ["Hope you enjoy your cookie!", "Save some crumbs for me!", "I scream. You scream. We all scream for COOOOOOKKKIEEEEESS!"]

@@ -8,6 +8,7 @@ munchies_dice_edit = DiceEdit("munchies")
 sweet_dice_edit = DiceEdit("sweet")
 custom_dice_edit = DiceEdit("custom")
 mystery_box_edit = DiceEdit("mystery")
+cookie_dice_edit = DiceEdit("cookie")
 
 # Preset Dice Options
 
@@ -15,6 +16,7 @@ sober_dice_edit.add_to_dice(["Italian Food, specifically Pasta!", "Sushi. Ask fo
 drunk_dice_edit.add_to_dice(["Pizza!", "Cheeseburger with fried pickles!", "Big Ass Burrito!", "Brinner (that's breakfast for dinner, for your drinking novices out there!", "Grilled Cheese with Hot Sauce!", "Nachos!!!!!"])
 munchies_dice_edit.add_to_dice(["French Fries", "Chips and Dip: mouthfeel gets a solid 10!", "Everything in your fridge in a pan!", "Tacos! Tacos! Tacos!", "Fried Egg Pizza Sandwich", "Cheesesteak. Philly Cheesesteak!"])
 sweet_dice_edit.add_to_dice(["Candy in a Cup!! Step 1: buy lots of candy. Step 2: Make a cup layered with candy. Step 3: EAT CANDY!", "Chocolate Raspberry Milk Shake with Extra Whipped Cream", "Ice Cream with Fudge Sauce!! And maybe a warm brownie?", "Your Favorite Flavor Cake", "CHOCOLATE", "Donuts"])
+cookie_dice_edit.add_to_dice(["Chocolate Chip", "White Chocolate Chip", "Peanut Butter and Chocolate Chip"])
 
 # Menu
 
@@ -41,7 +43,7 @@ while exit_flag == False:
 
 
 
-	if dice_choice not in ["1", "2", "3", "4", "5", "6", "exit", "EXIT", "Exit"] or dice_choice == "" :
+	if dice_choice not in ["1", "2", "3", "4", "5", "6", "7", "exit", "EXIT", "Exit"] or dice_choice == "" :
 		print "You need to select an item from the menu! Type in the NUMBER on the menu that you would like choose." + "\n \n"
 	else:
 		# EXIT
@@ -123,6 +125,25 @@ while exit_flag == False:
 			
 			if yes_no == True:
 				print sweet_string
+
+		# COOKIES
+
+		elif dice_choice == "7":
+		
+			cookie_greeting = random.choice(cookie_witty_greeting)
+			print "\n \n" + cookie_greeting + "\n \n"
+
+			yes_no = cookie_dice_edit.yes_no_answer()
+			cookie_results = cookie_dice_edit.random_outcome(yes_no)
+
+			cookie_result_reveal = random.choice(cookie_witty_reveal)
+			cookie_result_ending = random.choice(cookie_witty_ending)
+
+			cookie_string = "\n \n" + cookie_result_reveal + "\n \n" + cookie_results + "\n \n" + cookie_result_ending + "\n \n"
+				
+			if yes_no == True:
+				print cookie_string
+
 
 		# Custom
 
