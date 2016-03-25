@@ -58,7 +58,7 @@ class DiceEdit(object):
 				print "\n \n" + random.choice(no_answer) + "\n \n"
 				#end program
 			else: 
-				yes_no_answer == True
+				return True
 
 		elif yes_no_answer in ("n", "N", "NO", "no", "No"):
 			print "\n \n" + random.choice(no_answer) + "\n \n"

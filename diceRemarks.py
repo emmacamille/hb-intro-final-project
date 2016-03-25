@@ -110,3 +110,6 @@ exit_witty_remark = [
 cookie_witty_greeting = ["YAY! It's our Final Class!!!! Time for some COOKIES!!!!!", "Congrats! You made it! You found the EASTER EGG!!!", "COOKIE COOKIE COOKIE COOKIE! Roll the dice to get a cookie!"]
 cookie_witty_reveal = ["Are you ready for a cookie? Here's the flavor you're getting:", "Cookie Time! Cookie, cookie, cookie time! You're snacking on:"]
 cookie_witty_ending = ["Hope you enjoy your cookie!", "Save some crumbs for me!", "I scream. You scream. We all scream for COOOOOOKKKIEEEEESS!"]
+
+# EXIT OUT
+wrong_menu_response = ["You need to select an item from the menu! Type in the NUMBER on the menu that you would like choose.", "Dude. Seriously! Follow the instructions.", "C'mon!!!! You can do better than that! Type the menu item you'd like to select."]

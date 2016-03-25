@@ -44,7 +44,7 @@ while exit_flag == False:
 
 
 	if dice_choice not in ["1", "2", "3", "4", "5", "6", "7", "exit", "EXIT", "Exit"] or dice_choice == "" :
-		print "You need to select an item from the menu! Type in the NUMBER on the menu that you would like choose." + "\n \n"
+		print "\n \n" + random.choice(wrong_menu_response) + "\n \n"
 	else:
 		# EXIT
 		if dice_choice in ["exit", "EXIT", "Exit"]:
